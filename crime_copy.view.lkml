@@ -37,7 +37,7 @@ view: crime_copy {
       quarter,
       year
     ]
-    sql: ${TABLE}.date ;;
+    sql: ${TABLE}.date ;;convert_tz: no
   }
 
   dimension: description {
@@ -139,5 +139,11 @@ view: crime_copy {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: monthly_average {
+    type: number
+    sql: (${count} / 12.00) ;;
+    value_format_name: decimal_2
   }
 }
