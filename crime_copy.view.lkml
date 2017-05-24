@@ -87,7 +87,7 @@ view: crime_copy {
 
   dimension: primary_type {
     type: string
-    sql: ${TABLE}.primary_type ;;
+    sql: LOWER(${TABLE}.primary_type) ;;
   }
 
   dimension: unique_key {

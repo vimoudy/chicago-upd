@@ -31,7 +31,7 @@ view: crime_per_year {
   dimension: crime_copy_primary_type {
     type: string
     primary_key: yes
-    sql: ${TABLE}.crime_copy_primary_type ;;
+    sql: LOWER(${TABLE}.crime_copy_primary_type) ;;
   }
 
   dimension: crime_copy_count {

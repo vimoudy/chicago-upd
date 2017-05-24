@@ -14,6 +14,7 @@ view: max_crime_community {
           ORDER BY 2 ASC) as foo
       GROUP BY 2
       ORDER BY 1 DESC
+      LIMIT 1
        ;;
   }
 
