@@ -14,6 +14,7 @@ view: gsod2003 {
 
   dimension: count_stp {
     type: number
+
     sql: ${TABLE}.count_stp ;;
   }
 
