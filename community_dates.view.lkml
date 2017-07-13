@@ -40,7 +40,8 @@ view: community_dates {
     drill_fields: [detail*]
   }
 
-  dimension_group: date {
+  dimension_group: Bro {
+    #label: "Date Bro"
     type: time
     sql: ${TABLE}.date ;;
     convert_tz: no
@@ -68,6 +69,6 @@ view: community_dates {
   }
 
   set: detail {
-    fields: [date_time, latitude, longitude, crime_copy_count, location]
+    fields: [latitude, longitude, crime_copy_count, location]
   }
 }

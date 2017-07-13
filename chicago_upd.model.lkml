@@ -9,7 +9,7 @@ include: "*.dashboard"
 
 explore: crime_copy {
   persist_for: "24 hours"
-  hidden: yes
+  #hidden: yes
 }
 
 explore: crime_per_year {
