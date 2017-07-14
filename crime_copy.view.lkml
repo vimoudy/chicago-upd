@@ -351,12 +351,49 @@ view: crime_copy {
         sql: ${community_area} = 43 ;;
         label: "SOUTH SHORE"
       }
+      when: {
+        sql: ${community_area} = 6 ;;
+        label: "LAKE VIEW"
+      }
+      when: {
+        sql: ${community_area} = 7 ;;
+        label: "LINCOLN PARK"
+      }
+      when: {
+        sql: ${community_area} = 10 ;;
+        label: "NORWOOD PARK"
+      }
+      when: {
+        sql: ${community_area} = 17 ;;
+        label: "DUNNING"
+      }
+      when: {
+        sql: ${community_area} = 33 ;;
+        label: "NORTH SOUTH SIDE"
+      }
+      when: {
+        sql: ${community_area} = 46 ;;
+        label: "SOUTH CHICAGO"
+      }
+      when: {
+        sql: ${community_area} = 52 ;;
+        label: "EAST SIDE"
+      }
+      when: {
+        sql: ${community_area} = 53 ;;
+        label: "WEST PULLMAN"
+      }
     }
   }
 
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: count_distinct {
+    type: count_distinct
+    sql: ${community_name} ;;
   }
 
   measure: monthly_average {
