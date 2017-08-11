@@ -35,6 +35,8 @@ view: crime_copy {
       week,
       month,
       quarter,
+      minute,
+      minute10,
       year
     ]
     sql: ${TABLE}.date ;;convert_tz: no
